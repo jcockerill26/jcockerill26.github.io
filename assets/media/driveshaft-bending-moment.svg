@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="820" viewBox="0 0 1200 820" role="img" aria-labelledby="chart-title chart-description">
+  <title id="chart-title">Combined bending moment</title>
+  <desc id="chart-description">Recreated from Table 2, page 5 of the driveshaft optimization report. Shaft distance in inches and combined bending moment in pound-force inches: (0, 0), (8, 796), (23, 549), and (29, 0). Straight segments connect the reported points. The maximum reported moment is 796 pound-force inches at 8 inches.</desc>
+  <metadata>Source: Fatigue Project 2 Complete Set.pdf, Table 2, page 5. Plot mapping: x = 155 + distance * 980 / 29; y = 650 - moment * 490 / 900. Reported points: [[0,0],[8,796],[23,549],[29,0]].</metadata>
+  <rect width="1200" height="820" fill="#ffffff"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="155" y="68" fill="#24252a" font-size="34" font-weight="700">Combined bending moment</text>
+    <text x="155" y="104" fill="#666970" font-size="20">Reported loading along the 29-inch shaft</text>
+
+    <g stroke="#e8e8eb" stroke-width="1.5">
+      <path d="M155 541.111111H1135 M155 432.222222H1135 M155 323.333333H1135 M155 214.444444H1135"/>
+      <path d="M425.344828 160V650 M661.896552 160V650 M932.241379 160V650" stroke-dasharray="4 7"/>
+    </g>
+
+    <g fill="#555960" font-size="22" text-anchor="end">
+      <text x="131" y="657">0</text>
+      <text x="131" y="548.111111">200</text>
+      <text x="131" y="439.222222">400</text>
+      <text x="131" y="330.333333">600</text>
+      <text x="131" y="221.444444">800</text>
+    </g>
+
+    <path d="M155 160V650H1135" fill="none" stroke="#777b82" stroke-width="2"/>
+    <g stroke="#777b82" stroke-width="2">
+      <path d="M155 650V660 M425.344828 650V660 M661.896552 650V660 M932.241379 650V660 M1135 650V660"/>
+    </g>
+    <g fill="#555960" font-size="22" text-anchor="middle">
+      <text x="155" y="690">0</text>
+      <text x="425.344828" y="690">8</text>
+      <text x="661.896552" y="690">15</text>
+      <text x="932.241379" y="690">23</text>
+      <text x="1135" y="690">29</text>
+    </g>
+
+    <path d="M155 650L425.344828 216.622222L932.241379 351.1L1135 650Z" fill="#7b242b" fill-opacity="0.045"/>
+    <polyline id="reported-moment" points="155,650 425.344828,216.622222 932.241379,351.1 1135,650" fill="none" stroke="#7b242b" stroke-width="4.5" stroke-linejoin="round" stroke-linecap="round"/>
+    <g fill="#ffffff" stroke="#7b242b" stroke-width="3.5">
+      <circle cx="155" cy="650" r="6"/>
+      <circle cx="425.344828" cy="216.622222" r="7"/>
+      <circle cx="932.241379" cy="351.1" r="7"/>
+      <circle cx="1135" cy="650" r="6"/>
+    </g>
+
+    <g fill="#ffffff">
+      <rect x="341" y="151" width="169" height="40" rx="5"/>
+      <rect x="848" y="286" width="169" height="40" rx="5"/>
+    </g>
+    <g fill="#7b242b" font-size="26" font-weight="700" text-anchor="middle">
+      <text x="425.344828" y="180">796 lbf·in</text>
+      <text x="932.241379" y="315">549 lbf·in</text>
+    </g>
+    <text x="645" y="747" text-anchor="middle" fill="#34373d" font-size="24">Shaft distance (in)</text>
+    <text transform="translate(46 405) rotate(-90)" text-anchor="middle" fill="#34373d" font-size="24">Bending moment (lbf·in)</text>
+  </g>
+</svg>
