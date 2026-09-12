@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Designing a planetary gearbox test rig, running 45 trials across nine conditions, and evaluating measurement uncertainty and apparatus bias.">
+  <meta name="theme-color" content="#151716">
+  <title>Planetary gearbox efficiency test rig | Jacob Cockerill</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/portfolio.css">
+</head>
+<body class="page-projects page-experimental-project">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><div class="container header-inner"><nav aria-label="Main navigation">
+  <span class="nav-name">Jacob Cockerill</span>
+  <div class="nav-links"><a href="../index.html">Home</a><a href="../projects.html" aria-current="page">Projects</a><a href="../experience.html">Experience</a><a href="../about.html">About</a><a href="../cv.html">CV</a></div>
+</nav></div></header>
+<main id="main" tabindex="-1">
+  <header class="container project-heading">
+    <a class="back-link" href="../projects.html"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12H4m6-6-6 6 6 6"/></svg> All projects</a>
+    <p class="eyebrow">Experimental design &amp; testing</p>
+    <h1>Planetary gearbox efficiency test rig</h1>
+    <p class="project-subtitle">Building an experiment to measure power transmission and understand its measurement limits.</p>
+    <dl class="project-facts">
+      <div><dt>Timeline</dt><dd>Dec 2025 — Feb 2026</dd></div>
+      <div><dt>Context</dt><dd>Experimental design &amp; testing</dd></div>
+      <div><dt>Tools &amp; methods</dt><dd><ul class="tags" aria-label="Tools and methods"><li>Prony brake</li><li>Force measurement</li><li>MATLAB</li></ul></dd></div>
+    </dl>
+    <p class="project-team small muted"><strong>Team:</strong> Jacob Cockerill, Andrew Fong, Shaun Yamamoto, Onur Dorduncu</p>
+  </header>
+
+  <figure class="container project-cover">
+    <div class="media media-frame wide"><img src="../assets/media/gearbox-test-rig.jpg" alt="Annotated test rig showing the MiniCIM motor, 4:1 planetary gearbox, bicycle brake, and water-cooling coils." width="672" height="388" loading="eager" fetchpriority="high" decoding="async"></div>
+    <figcaption><span>The team’s built apparatus, with a bicycle brake applying load and cooling coils around the motor.</span><a class="text-link" href="../assets/media/gearbox-test-rig.jpg" target="_blank" rel="noopener">Open full-size photo <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a></figcaption>
+  </figure>
+
+  <div class="container project-body">
+    <aside class="project-sidebar" aria-labelledby="stats-title">
+      <h2 id="stats-title">Technical focus</h2>
+      <dl class="technical-focus">
+        <div class="focus-item"><dt>45 trials</dt><dd>Five repetitions at each of nine speed and load conditions.</dd></div>
+        <div class="focus-item"><dt>Torque measurement</dt><dd>Used reaction forces and measured lever arms to calculate input and output torque.</dd></div>
+        <div class="focus-item"><dt>Measurement quality</dt><dd>Propagated instrument and trial-to-trial uncertainty, while identifying possible bias from the cooling setup.</dd></div>
+      </dl>
+    </aside>
+    <div class="project-narrative">
+      <section>
+        <h2>Overview</h2>
+        <p>Our four-person team designed and built an apparatus to characterize the steady-state efficiency of a 4:1 Versa Planetary gearbox. The project connected fixture design, instrumentation, and physical testing, with a target of keeping calculated relative uncertainty below 15% across the selected operating range.</p>
+      </section>
+      <section>
+        <h2>Measuring torque through reaction forces</h2>
+        <p>A MiniCIM motor drove the gearbox while a bicycle rotor and caliper acted as a Prony brake. Force gauges measured reactions through lever arms at the motor and brake. Starting from mechanical power as torque times angular speed, we derived an efficiency equation using these forces, measured arm lengths, and the fixed 4:1 reduction. A laser tachometer monitored output speed.</p>
+        <p>The fixtures included features for measuring the lever arms consistently. Instrument ranges and the expected measurement uncertainty informed the test conditions.</p>
+      </section>
+      <section>
+        <h2>Running the test matrix</h2>
+        <p>We tested input speeds of 3,200, 3,600, and 4,000 rpm at output torques of 0.16, 0.22, and 0.28 N·m. Each combination was repeated five times. Between trials, the motor stopped and the force gauges were zeroed; voltage and brake pressure were then adjusted to reach the next condition.</p>
+      </section>
+      <section>
+        <h2>Results and measurement limits</h2>
+        <p>Measured efficiencies ranged from about 49% to 75% and increased between the lowest and highest loads at each tested speed. The effect of speed remained inconclusive because uncertainty bounds overlapped. Reported relative uncertainties were approximately 7.8–10.9%, meeting the project’s 15% target.</p>
+        <p>The absolute efficiency values require caution. Cooling coils attached to the motor may have resisted its reaction motion, inflating the input force reading and lowering the calculated efficiency. That possible apparatus bias was not resolved by the reported uncertainty calculation.</p>
+      </section>
+      <section>
+        <h2>What the experiment established</h2>
+        <p>The rig provided a working basis for repeated gearbox testing and highlighted where the apparatus could influence the result. Separating cooling forces from torque measurement and improving shaft alignment would be priorities before extending the efficiency map.</p>
+      </section>
+    </div>
+  </div>
+
+  <section class="container project-gallery" aria-labelledby="gallery-title">
+    <h2 id="gallery-title">Project details</h2>
+    <div class="gallery-grid">
+      <figure>
+        <div class="media media-frame full-photo"><img src="../assets/media/gearbox-apparatus-schematic.png" alt="Original apparatus schematic showing the motor, planetary gearbox, Prony brake, input and output force gauges, lever arms, and laser tachometer." width="1750" height="872" loading="lazy" decoding="async"></div>
+        <figcaption><span>The measurement layout: force reactions and lever-arm lengths provide torque, while the tachometer monitors shaft speed.</span><br><a class="text-link" href="../assets/media/gearbox-apparatus-schematic.png" target="_blank" rel="noopener">Open full-size figure <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a></figcaption>
+      </figure>
+      <figure>
+        <div class="media media-frame full-photo"><img src="../assets/media/gearbox-efficiency-vs-torque.png" alt="Measured gearbox efficiency versus output torque at input speeds of 3,200, 3,600, and 4,000 rpm, with horizontal and vertical uncertainty bars." width="1389" height="746" loading="lazy" decoding="async"></div>
+        <figcaption><span>Original results with uncertainty bars. Efficiency increased across the tested load range; possible cooling-system interference limits interpretation of the absolute values.</span><br><a class="text-link" href="../assets/media/gearbox-efficiency-vs-torque.png" target="_blank" rel="noopener">Open full-size figure <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <nav class="container next-project" aria-label="Project navigation"><a class="back-link" href="../projects.html"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12H4m6-6-6 6 6 6"/></svg> All projects</a><a class="next-project-link" href="prybar-modal-analysis.html"><span>Next project</span><strong>Prybar modal analysis <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></strong></a></nav>
+</main>
+<footer class="contact-section" aria-labelledby="contact-title"><div class="container contact-inner"><div><h2 id="contact-title">Contact</h2></div><div class="contact-links"><a href="mailto:jacobmcockerill@icloud.com">jacobmcockerill@icloud.com <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a><a href="https://www.linkedin.com/in/jcockerill26/">LinkedIn <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a></div></div></footer>
+</body>
+</html>

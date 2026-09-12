@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Designing a deflection-based method to estimate the drag coefficient of a flexible rod, with instrument selection, design constraints, and uncertainty analysis.">
+  <meta name="theme-color" content="#151716">
+  <title>Wind-tunnel drag measurement design | Jacob Cockerill</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/portfolio.css">
+</head>
+<body class="page-projects page-experimental-project">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><div class="container header-inner"><nav aria-label="Main navigation">
+  <span class="nav-name">Jacob Cockerill</span>
+  <div class="nav-links"><a href="../index.html">Home</a><a href="../projects.html" aria-current="page">Projects</a><a href="../experience.html">Experience</a><a href="../about.html">About</a><a href="../cv.html">CV</a></div>
+</nav></div></header>
+<main id="main" tabindex="-1">
+  <header class="container project-heading">
+    <a class="back-link" href="../projects.html#experimental"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12H4m6-6-6 6 6 6"/></svg> All projects</a>
+    <p class="eyebrow">Measurement-system design</p>
+    <h1>Wind-tunnel drag measurement design</h1>
+    <p class="project-subtitle">Inferring aerodynamic drag from a flexible rod’s deflection.</p>
+    <dl class="project-facts">
+      <div><dt>Timeline</dt><dd>Apr — May 2025</dd></div>
+      <div><dt>Context</dt><dd>Experimental-design study</dd></div>
+      <div><dt>Tools &amp; methods</dt><dd><ul class="tags" aria-label="Tools and methods"><li>Experimental design</li><li>Uncertainty propagation</li><li>Instrumentation</li></ul></dd></div>
+    </dl>
+    <p class="project-team small muted"><strong>Team:</strong> Josh McManus, Jacob Cockerill, Anders Caldwell, Colin Young</p>
+  </header>
+
+  <figure class="container project-cover">
+    <div class="media media-frame wide"><img src="../assets/media/wind-tunnel-apparatus.png" alt="Proposed wind-tunnel setup with a flexible rod, laser displacement sensor, and manometer for inferring drag from rod deflection." width="1958" height="1228" loading="eager" fetchpriority="high" decoding="async"></div>
+    <figcaption><span>Proposed measurement arrangement, showing rod deflection, dynamic-pressure measurement, and the laser sensor.</span><a class="text-link" href="../assets/media/wind-tunnel-apparatus.png" target="_blank" rel="noopener">Open full-size figure <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a></figcaption>
+  </figure>
+
+  <div class="container project-body">
+    <aside class="project-sidebar" aria-labelledby="stats-title">
+      <h2 id="stats-title">Technical focus</h2>
+      <dl class="technical-focus">
+        <div class="focus-item"><dt>10% target</dt><dd>Specified a relative-uncertainty target for the planned drag-coefficient measurement.</dd></div>
+        <div class="focus-item"><dt>Indirect measurement</dt><dd>Connected cantilever deflection with aerodynamic loading to develop a method for estimating drag from displacement and pressure measurements.</dd></div>
+        <div class="focus-item"><dt>Uncertainty budget</dt><dd>Examined instrument resolution, material-property uncertainty, and anticipated random variation to guide the proposed setup.</dd></div>
+      </dl>
+    </aside>
+    <div class="project-narrative">
+      <section>
+        <h2>Overview</h2>
+        <p>Our team developed an experimental plan to estimate the low-speed drag coefficient of a flexible cylindrical rod in a wind tunnel. The challenge was to choose a specimen and measurement system that would produce a detectable deflection while meeting a specified uncertainty target. The project focused on measurement design and analysis, rather than a completed wind-tunnel test campaign.</p>
+      </section>
+      <section>
+        <h2>Connecting deflection to drag</h2>
+        <p>The proposed method treated the rod as a cantilever under distributed aerodynamic loading. Tip displacement, rod geometry, material stiffness, and dynamic pressure formed the basis of the data-reduction model. A laser sensor would measure deflection, while a Pitot-static tube and manometer would provide the pressure measurement.</p>
+      </section>
+      <section>
+        <h2>Selecting the specimen and instruments</h2>
+        <p>We used design-space analysis to consider combinations of rod diameter, material stiffness, and tunnel conditions. The report selected a 280 mm long, 12.7 mm diameter HDPE rod as a candidate. The design had to fit the tunnel, stay within its 55 m/s maximum velocity, and keep tip deflection below 5% of rod length to support the small-deflection assumption.</p>
+        <div class="comparison-table-wrap">
+          <table class="comparison-table">
+            <caption>Proposed measurement plan</caption>
+            <thead><tr><th scope="col">Quantity</th><th scope="col">Instrument or input</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Tip deflection</th><td>Laser displacement sensor</td></tr>
+              <tr><th scope="row">Rod length and diameter</th><td>Calipers</td></tr>
+              <tr><th scope="row">Dynamic pressure</th><td>Pitot-static tube and manometer</td></tr>
+              <tr><th scope="row">Elastic modulus</th><td>Material data and assumed uncertainty</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <section>
+        <h2>Designing around uncertainty</h2>
+        <p>We propagated input uncertainties through the measurement model to assess which quantities would most affect the drag estimate. In the proposed budget, uncertainty in the rod’s elastic modulus dominated the instrument contributions. That finding made material characterization an important consideration alongside sensor resolution.</p>
+      </section>
+      <section>
+        <h2>Outcome and next steps</h2>
+        <p>The deliverable was a measurement procedure, a candidate specimen, and an uncertainty-based rationale for the instrument choices. Establishing actual performance would require checking the data-reduction model, characterizing the rod’s stiffness, and collecting repeated wind-tunnel measurements. The central lesson was that selecting a precise sensor is only one part of designing a reliable measurement.</p>
+      </section>
+    </div>
+  </div>
+
+  <section class="container project-gallery" aria-labelledby="gallery-title">
+    <h2 id="gallery-title">Project details</h2>
+    <div class="gallery-grid">
+      <figure>
+        <div class="media media-frame full-photo"><img src="../assets/media/wind-drag-deflection.png" alt="Original design-space plot showing predicted rod deflection for upper and lower assumed drag coefficients, with design bounds marked by dashed lines." width="2448" height="1992" loading="lazy" decoding="async"></div>
+        <figcaption><span>Deflection design space, showing the assumed drag-coefficient range and the selected deflection bounds.</span><br><a class="text-link" href="../assets/media/wind-drag-deflection.png" target="_blank" rel="noopener">Open full-size figure <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a></figcaption>
+      </figure>
+      <figure>
+        <div class="media media-frame full-photo"><img src="../assets/media/wind-material-design-space.png" alt="Original design-space plot showing upper and lower elastic-modulus bounds as a function of rod diameter, with dashed selection limits." width="2448" height="1992" loading="lazy" decoding="async"></div>
+        <figcaption><span>Material-stiffness and rod-diameter design space, used to guide the proposed specimen selection.</span><br><a class="text-link" href="../assets/media/wind-material-design-space.png" target="_blank" rel="noopener">Open full-size figure <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <nav class="container next-project" aria-label="Project navigation">
+    <a class="back-link" href="../projects.html#experimental"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12H4m6-6-6 6 6 6"/></svg> All projects</a>
+    <a class="next-project-link" href="excavator-payload.html"><span>Next project</span><strong>Excavator payload estimation <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></strong></a>
+  </nav>
+</main>
+<footer class="contact-section" aria-labelledby="contact-title"><div class="container contact-inner"><div><h2 id="contact-title">Contact</h2></div><div class="contact-links"><a href="mailto:jacobmcockerill@icloud.com">jacobmcockerill@icloud.com <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a><a href="https://www.linkedin.com/in/jcockerill26/">LinkedIn <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a></div></div></footer>
+</body>
+</html>
