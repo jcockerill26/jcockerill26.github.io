@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Engineering projects in computational modeling, mechanical design, controls, and field validation.">
+  <meta name="description" content="Engineering projects in industry-sponsored development, computational modeling and design, and experimental design and testing.">
   <meta name="theme-color" content="#151716">
   <title>Projects | Jacob Cockerill</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
@@ -15,13 +15,19 @@
   <span class="nav-name">Jacob Cockerill</span>
   <div class="nav-links"><a href="index.html">Home</a><a href="projects.html" aria-current="page">Projects</a><a href="experience.html">Experience</a><a href="about.html">About</a><a href="cv.html">CV</a></div>
 </nav></div></header>
-<main id="main" tabindex="-1"><div class="section container"><header class="page-heading"><p class="eyebrow">Selected work</p><h1>Engineering projects.</h1></header><section class="project-collection collection-industry" aria-labelledby="industry-title"><div class="collection-heading"><h2 id="industry-title">Industry-Sponsored Projects</h2><p>Engineering work developed with an industry partner,
+<main id="main" tabindex="-1"><div class="section container"><header class="page-heading"><p class="eyebrow">Selected work</p><h1>Engineering projects.</h1>
+  <nav class="project-jump-links" aria-label="Project categories">
+    <a href="#industry">Industry-sponsored</a>
+    <a href="#computational">Computational modeling &amp; design</a>
+    <a href="#experimental">Experimental design &amp; testing</a>
+  </nav>
+</header><section id="industry" class="project-collection collection-industry" aria-labelledby="industry-title"><div class="collection-heading"><h2 id="industry-title">Industry-Sponsored Projects</h2><p>Engineering work developed with an industry partner,
 from prototype to field validation.</p></div><div class="project-grid"><article class="project-card">
     <a class="project-link" href="projects/excavator-payload.html">
       <div class="card-media"><div class="media media-frame "><img src="assets/media/excavator-main.png" alt="Excavator loading soil into a dump truck at a construction site" width="1653" height="951" loading="eager" fetchpriority="high" decoding="async"></div></div>
       <div class="card-copy"><p class="eyebrow">Industry R&amp;D</p><h3>Excavator payload estimation</h3><p class="card-summary">Computational modeling and simulation for Renascent’s excavator weighing system, including an inverse surrogate model for payload estimation.</p><p class="card-period">Sep 2025 — Aug 2026</p><div class="card-result"><strong>164</strong><span>Unique field captures<br>used in model simulations</span></div><ul class="tags" aria-label="Tools and methods"><li>Python</li><li>Surrogate modeling</li><li>Signal processing</li><li>Raspberry Pi</li></ul><span class="project-card-link">View project <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></span></div>
     </a>
-  </article></div></section><section class="project-collection collection-computational" aria-labelledby="computational-title"><div class="collection-heading"><h2 id="computational-title">Computational &amp; Design Projects</h2><p>Numerical methods, simulation, controls, and mechanical design.</p></div><div class="project-grid"><article class="project-card">
+  </article></div></section><section id="computational" class="project-collection collection-computational" aria-labelledby="computational-title"><div class="collection-heading"><h2 id="computational-title">Computational Modeling &amp; Design</h2><p>Numerical methods, simulation, controls, and mechanical design.</p></div><div class="project-grid"><article class="project-card">
     <a class="project-link" href="projects/nozzle-flow.html">
       <div class="card-media"><div class="media media-frame scientific-figure"><img src="assets/media/cfd-nozzle-mach.png" alt="Mach-number contours from the saved 12 × 12 solution. The modeled upper half of the nozzle has a symmetry boundary at y = 0." width="2340" height="990" loading="lazy" decoding="async"></div></div>
       <div class="card-copy"><p class="eyebrow">Computational fluid dynamics</p><h3>Compressible nozzle flow</h3><p class="card-summary">Comparing a two-dimensional nozzle-flow solution with quasi-one-dimensional theory, while resolving variation across the flow.</p><p class="card-period">Apr — May 2026</p><ul class="tags" aria-label="Tools and methods"><li>MATLAB</li><li>Finite volume</li><li>Mesh refinement</li></ul><span class="project-card-link">View project <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></span></div>
@@ -46,12 +52,31 @@ from prototype to field validation.</p></div><div class="project-grid"><article 
       <div class="card-media"><div class="media media-frame scientific-figure"><img src="assets/media/driveshaft-free-body.png" alt="Free-body diagram showing bearing reactions, gear forces, and input torque." width="1520" height="928" loading="lazy" decoding="async"></div></div>
       <div class="card-copy"><p class="eyebrow">Mechanical design</p><h3>Driveshaft fatigue &amp; optimization</h3><p class="card-summary">Fatigue-based shaft sizing followed by a constrained search for a lighter stepped design across seven alloys.</p><p class="card-period">Sep — Oct 2025</p><ul class="tags" aria-label="Tools and methods"><li>MATLAB</li><li>Fatigue analysis</li><li>Constrained optimization</li></ul><span class="project-card-link">View project <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></span></div>
     </a>
-  </article><article class="project-card">
+  </article></div></section>
+  <section id="experimental" class="project-collection collection-experimental" aria-labelledby="experimental-title">
+    <div class="collection-heading"><h2 id="experimental-title">Experimental Design &amp; Testing</h2><p>Measurement-system design, physical testing, and careful evaluation of experimental results.</p></div>
+    <div class="project-grid">
+      <article class="project-card">
+        <a class="project-link" href="projects/planetary-gearbox-testing.html">
+          <div class="card-media"><div class="media media-frame scientific-figure"><img src="assets/media/gearbox-test-rig.jpg" alt="Annotated test rig showing the MiniCIM motor, 4:1 planetary gearbox, bicycle brake, and water-cooling coils." width="672" height="388" loading="lazy" decoding="async"></div></div>
+          <div class="card-copy"><p class="eyebrow">Experimental design &amp; testing</p><h3>Planetary gearbox efficiency test rig</h3><p class="card-summary">A Prony-brake test rig and 45 trials across nine operating conditions, connecting instrumentation with uncertainty analysis.</p><p class="card-period">Dec 2025 — Feb 2026</p><ul class="tags" aria-label="Tools and methods"><li>Test-rig design</li><li>Instrumentation</li><li>Uncertainty analysis</li></ul><span class="project-card-link">View project <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></span></div>
+        </a>
+      </article>
+      <article class="project-card">
     <a class="project-link" href="projects/prybar-modal-analysis.html">
       <div class="card-media"><div class="media media-frame "><img src="assets/media/modal-prybar-test-setup.jpg" alt="Prybar on foam supports with an instrumented hammer, accelerometer, data-acquisition hardware, and MEscope laptop." width="1767" height="1008" loading="lazy" decoding="async"></div></div>
       <div class="card-copy"><p class="eyebrow">Experimental dynamics</p><h3>Prybar modal analysis</h3><p class="card-summary">Impact-testing a real prybar, identifying its vibration modes, and comparing two finite-element models with the measurements.</p><p class="card-period">Oct — Nov 2024</p><ul class="tags" aria-label="Tools and methods"><li>MEscope</li><li>SolidWorks</li><li>Impact testing</li></ul><span class="project-card-link">View project <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></span></div>
     </a>
-  </article></div></section></div></main>
+      </article>
+      <article class="project-card">
+        <a class="project-link" href="projects/wind-tunnel-measurement.html">
+          <div class="card-media"><div class="media media-frame scientific-figure"><img src="assets/media/wind-tunnel-apparatus.png" alt="Proposed wind-tunnel setup with a flexible rod, laser displacement sensor, and manometer for inferring drag from rod deflection." width="1958" height="1228" loading="lazy" decoding="async"></div></div>
+          <div class="card-copy"><p class="eyebrow">Measurement-system design</p><h3>Wind-tunnel drag measurement design</h3><p class="card-summary">Designing a deflection-based method to estimate a flexible rod’s drag coefficient, with instrument selection and an uncertainty budget.</p><p class="card-period">Apr — May 2025</p><ul class="tags" aria-label="Tools and methods"><li>Experimental design</li><li>Uncertainty propagation</li><li>Instrumentation</li></ul><span class="project-card-link">View project <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></span></div>
+        </a>
+      </article>
+    </div>
+  </section>
+</div></main>
 <footer class="contact-section" aria-labelledby="contact-title"><div class="container contact-inner"><div><h2 id="contact-title">Contact</h2></div><div class="contact-links"><a href="mailto:jacobmcockerill@icloud.com">jacobmcockerill@icloud.com <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a><a href="https://www.linkedin.com/in/jcockerill26/">LinkedIn <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a></div></div></footer>
 </body>
 </html>
