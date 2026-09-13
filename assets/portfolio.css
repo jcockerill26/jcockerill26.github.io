@@ -186,6 +186,9 @@ figcaption { margin-top: 12px; color: var(--muted); font-size: .875rem; line-hei
 .gallery-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 30px; align-items: start; }
 .gallery-grid figure { min-width: 0; }
 .gallery-grid.gallery-single { grid-template-columns: minmax(0,1fr); max-width: 780px; }
+@media (max-width: 760px) {
+  .gearbox-results-gallery { grid-template-columns: minmax(0,1fr); }
+}
 .supporting-figure { margin-bottom: 36px; }
 .supporting-figure figcaption { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 22px; }
 .supporting-figure figcaption > span { flex: 1 1 480px; }
