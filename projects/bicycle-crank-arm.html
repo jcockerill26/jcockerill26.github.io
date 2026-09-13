@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Comparing splined and tapered bicycle crank arms through analytical model checks, bolt-preloaded finite-element analysis, and local mesh refinement.">
+  <meta name="theme-color" content="#151716">
+  <title>Bicycle crank-arm structural analysis | Jacob Cockerill</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/portfolio.css">
+</head>
+<body class="page-projects">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><div class="container header-inner"><nav aria-label="Main navigation">
+  <span class="nav-name">Jacob Cockerill</span>
+  <div class="nav-links"><a href="../index.html">Home</a><a href="../projects.html" aria-current="page">Projects</a><a href="../experience.html">Experience</a><a href="../about.html">About</a><a href="../cv.html">CV</a></div>
+</nav></div></header>
+<main id="main" tabindex="-1">
+  <header class="container project-heading">
+    <a class="back-link" href="../projects.html"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12H4m6-6-6 6 6 6"/></svg> All projects</a>
+    <p class="eyebrow">Finite-element analysis</p>
+    <h1>Bicycle crank-arm structural analysis</h1>
+    <p class="project-subtitle">Comparing two spindle interfaces through model checks, joint loading, and local stress analysis.</p>
+    <dl class="project-facts">
+      <div><dt>Timeline</dt><dd>Dec 2024 — Feb 2025</dd></div>
+      <div><dt>Context</dt><dd>Structural modeling &amp; comparison</dd></div>
+      <div><dt>Tools &amp; methods</dt><dd><ul class="tags" aria-label="Tools and methods"><li>ANSYS Mechanical</li><li>Finite elements</li><li>Mesh convergence</li></ul></dd></div>
+    </dl>
+    <p class="project-team small muted"><strong>Team:</strong> Jacob Cockerill, Noah Bast</p>
+  </header>
+
+  <figure class="container project-cover">
+    <div class="media media-frame wide"><img src="../assets/media/crank-arm-geometry.jpg" alt="CAD geometry of the bicycle crank arm with a splined spindle interface at the left and a pedal attachment at the right." width="1061" height="577" loading="eager" fetchpriority="high" decoding="async"></div>
+    <figcaption><span>Splined crank-arm geometry. The study compared this connection with a tapered spindle interface.</span><a class="text-link" href="../assets/media/crank-arm-geometry.jpg" target="_blank" rel="noopener">Open full-size figure <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a></figcaption>
+  </figure>
+
+  <div class="container project-body">
+    <aside class="project-sidebar" aria-labelledby="stats-title">
+      <h2 id="stats-title">Technical focus</h2>
+      <dl class="technical-focus">
+        <div class="focus-item"><dt>Analytical benchmarks</dt><dd>Checked simplified-model bending and torsional stresses against hand calculations before analyzing the detailed crank arms.</dd></div>
+        <div class="focus-item"><dt>Joint loading</dt><dd>Represented bolt preload, offset pedal loading, and compression-only support at the spindle interface.</dd></div>
+        <div class="focus-item"><dt>Local mesh refinement</dt><dd>Reduced the change in the selected-path stress metric to less than 2% on the final refinement for each design.</dd></div>
+      </dl>
+    </aside>
+    <div class="project-narrative">
+      <section><h2>Overview</h2><p>We compared splined and tapered bicycle crank arms to understand how the spindle connection affects local stress. Both models used 7075-T6 aluminum and the same prescribed loading. The work progressed from simplified analytical checks to detailed finite-element models with bolt pretension and locally refined meshes.</p></section>
+      <section><h2>Checking the modeling approach</h2><p>Before analyzing the crank arms, we built simplified models subjected to bending and torsion. We compared normal and shear stresses at selected cross-section locations with analytical calculations, then checked how those stresses changed with mesh refinement. These benchmarks helped assess the loading, constraints, and element choices before applying them to the more complex geometries.</p></section>
+      <section><h2>Representing the connection</h2><p>The final ANSYS static structural models used linear-elastic material properties and beam elements to represent the steel bolts. A 1 kN bolt preload was applied first and locked for the second load step. We then applied a 4.15 kN remote force at the pedal attachment, offset 55 mm from the counterbore face. Compression-only supports represented the loaded surfaces of the spindle connection.</p></section>
+      <section><h2>Refining the mesh where it mattered</h2><p>We used higher-order solid elements and concentrated refinement around the spindle openings while retaining a coarser mesh along the arm. Convergence was evaluated using the maximum von Mises stress along a selected edge path at each connection. The final local element sizes were 0.5625 mm for the splined model and 0.75 mm for the tapered model, with less than 2% change in that metric on the final refinement.</p></section>
+      <section><h2>What the comparison showed</h2><p>The reported maximum stresses along the selected paths were approximately 397 MPa for the splined design and 544 MPa for the tapered design. The tapered result exceeded the assigned 503 MPa yield strength, while the full-field contours showed local stress concentrations in both designs. The comparison identified the tapered interface as the greater concern under the modeled loading. With linear-elastic materials, these results indicate potential yielding, not a prediction of permanent deformation or fracture.</p></section>
+    </div>
+  </div>
+
+  <section class="container project-gallery" aria-labelledby="gallery-title">
+    <h2 id="gallery-title">Project details</h2>
+    <div class="gallery-grid">
+      <figure>
+        <div class="media media-frame full-photo"><img src="../assets/media/crank-arm-splined-stress.jpg" alt="Original ANSYS von Mises stress contour around the splined spindle opening, including the mesh, color legend in pascals, and scale bar." width="631" height="403" loading="lazy" decoding="async"></div>
+        <figcaption><span>Splined interface: local von Mises stress concentrations around the spline features. The original contour legend and mesh are retained.</span><br><a class="text-link" href="../assets/media/crank-arm-splined-stress.jpg" target="_blank" rel="noopener">Open full-size figure <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a></figcaption>
+      </figure>
+      <figure>
+        <div class="media media-frame full-photo"><img src="../assets/media/crank-arm-tapered-stress.jpg" alt="Original ANSYS von Mises stress contour around the tapered spindle opening, including the mesh, color legend in pascals, and scale bar." width="639" height="432" loading="lazy" decoding="async"></div>
+        <figcaption><span>Tapered interface: the corresponding von Mises stress contour under the same applied loading. Stresses along the evaluated path were higher than for the splined model.</span><br><a class="text-link" href="../assets/media/crank-arm-tapered-stress.jpg" target="_blank" rel="noopener">Open full-size figure <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a></figcaption>
+      </figure>
+    </div>
+  </section>
+  <nav class="container next-project" aria-label="Project navigation"><a class="back-link" href="../projects.html"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12H4m6-6-6 6 6 6"/></svg> All projects</a><a class="next-project-link" href="planetary-gearbox-testing.html"><span>Next project</span><strong>Planetary gearbox efficiency test rig <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></strong></a></nav>
+</main>
+<footer class="contact-section" aria-labelledby="contact-title"><div class="container contact-inner"><div><h2 id="contact-title">Contact</h2></div><div class="contact-links"><a href="mailto:jacobmcockerill@icloud.com">jacobmcockerill@icloud.com <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a><a href="https://www.linkedin.com/in/jcockerill26/">LinkedIn <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a></div></div></footer>
+</body>
+</html>
